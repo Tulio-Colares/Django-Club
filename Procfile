@@ -1,1 +1,1 @@
-web: gunicorn myclub_website.wsgi --login-file -
+web: gunicorn myclub_website.wsgi 
