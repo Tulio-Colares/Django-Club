@@ -8,20 +8,20 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' '2021' 'March' %}">Calendário</a>
+          <a class="nav-link" href="{% url 'home' '2021' 'March' %}">Calendar</a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Eventos
+            Events
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'list-events' %}">Todos os Eventos</a></li>
+            <li><a class="dropdown-item" href="{% url 'list-events' %}">All Events</a></li>
             {% if user.is_authenticated %}
-            <li><a class="dropdown-item" href="{% url 'add-event' %}">Adicionar Evento</a></li>
-            <li><a class="dropdown-item" href="{% url 'my_events' %}">Meus Eventos</a></li>
+            <li><a class="dropdown-item" href="{% url 'add-event' %}">Add Event</a></li>
+            <li><a class="dropdown-item" href="{% url 'my_events' %}">My Events</a></li>
             {% endif %}
-            <li><a class="dropdown-item" href="{% url 'search_events' %}">Pesquisar Evento</a></li>
+            <li><a class="dropdown-item" href="{% url 'search_events' %}">Search Event</a></li>
 
             
           </ul>
@@ -30,10 +30,10 @@
 
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Locais
+            Venues
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'list-venues' %}">Todos os locais</a></li>
+            <li><a class="dropdown-item" href="{% url 'list-venues' %}">All Venues</a></li>
             {% if user.is_authenticated %}
             <li><a class="dropdown-item" href="{% url 'add-venue' %}">Adicionar Local</a></li>
             {% endif %}
@@ -50,9 +50,9 @@
             Downloads
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'venue_text' %}">Arquivo texto - Local</a></li>
-            <li><a class="dropdown-item" href="{% url 'venue_csv' %}">Arquivo CSV</a></li>
-            <li><a class="dropdown-item" href="{% url 'venue_pdf' %}">Arquivo PDf</a></li>
+            <li><a class="dropdown-item" href="{% url 'venue_text' %}">Text File - Venue</a></li>
+            <li><a class="dropdown-item" href="{% url 'venue_csv' %}">CSV File</a></li>
+            <li><a class="dropdown-item" href="{% url 'venue_pdf' %}">PDF File</a></li>
           </ul>
         </li>
 
@@ -70,7 +70,7 @@
         </li>
       {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'register_user' %}">Registrar</a>
+          <a class="nav-link" href="{% url 'register_user' %}">Register</a>
         </li>
 
         <li class="nav-item">
